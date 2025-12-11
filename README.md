@@ -2,8 +2,8 @@
 
 Playable Gomoku (Five in a Row) engine with a CLI and Tkinter GUI. The engine
 implements iterative-deepening minimax with alpha-beta pruning and a lightweight
-pattern-based evaluator, so you can play against the AI, run AI-vs-AI
-simulations, or explore move generation on different board sizes.
+pattern-based evaluator, so you can play against the AI, run human vs human
+simulations, or explore move generation on a fixed size board(14 X 14).
 
 ## Features
 - Search: iterative-deepening minimax with alpha-beta pruning and move ordering.
@@ -52,11 +52,9 @@ GUI (fullscreen window):
 python -m src.ui_gui --size 15 --cell 48 --depth 3 --time 2.0
 ```
 - Start screen lets you choose Human vs Human or Human vs AI.
-- To watch the engine play itself, launch with `--simulate` (AI vs AI) and set
-  `--delay` to control the interval between moves in milliseconds.
 
 ## Configuration Flags
-- `--size`: board dimension (default 15).
+- `--size`: board dimension (default 14).
 - `--depth`: maximum search depth.
 - `--time`: time limit per AI move in seconds (used to stop iterative deepening).
 - GUI only: `--cell` (pixel size per cell), `--simulate` (AI vs AI mode),
@@ -75,8 +73,3 @@ Run the lightweight regression tests with pytest:
 ```bash
 python -m pytest
 ```
-
-## License
-Not specified. Add a license file if you intend to distribute or open-source the
-project.
-
